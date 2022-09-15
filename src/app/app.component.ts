@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first';
+  title = 'my-first-app okay';
+  seconds : number[];
+
+  constructor() {
+    this.seconds = [];
+  }
+
+  addComponent(event: {timeElapsed : number}){
+    console.log(event);
+    this.seconds.push(event.timeElapsed);
+  }
+
+
 }
